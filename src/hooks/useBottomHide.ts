@@ -1,33 +1,37 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export function useBottomHide(offset = 50) {
+export function useBottomHide() {
   const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight;
 
-      const isAtBottom =
-        scrollY + windowHeight >= docHeight - offset;
+      const bottomBuffer = 30; 
 
-      const scrollingDown = scrollY > lastScrollY;
+      const isNearBottom =
+        scrollY + windowHeight >= docHeight - bottomBuffer;
 
-      if (isAtBottom && scrollingDown) {
+      const scrollingDown = scrollY > lastScrollY.current;
+
+      if (isNearBottom) {
         setHidden(true);
-      } else {
+      } 
+      else if (!scrollingDown) {
         setHidden(false);
       }
 
-      lastScrollY = scrollY;
+      lastScrollY.current = scrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [offset]);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () =>
+      window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return hidden;
 }
