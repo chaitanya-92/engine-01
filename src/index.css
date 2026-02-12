@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 15px;
+  }
+  
+  body {
+    @apply bg-retro-cream text-retro-black antialiased;
+  }
+
+  html.dark body {
+    @apply bg-retro-black text-retro-cream;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  ::selection {
+    @apply bg-retro-orange text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-retro-paper;
+  }
+
+  html.dark ::-webkit-scrollbar-track {
+    @apply bg-retro-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-retro-gray/50 rounded-full;
+  }
+}
+
+@layer components {
+  .retro-card {
+    @apply bg-[#F3EDE3] border border-retro-black/10 rounded-lg;
+  }
+
+  html.dark .retro-card {
+    @apply bg-retro-dark border-white/10;
+  }
+
+  .retro-card-hover {
+    @apply hover:border-retro-orange/50 hover:shadow-lg hover:shadow-retro-orange/5 transition-all duration-200;
+  }
+  
+  .retro-btn {
+    @apply px-5 py-2.5 font-medium rounded-lg border border-retro-black/10
+           transition-all duration-200;
+  }
+
+  html.dark .retro-btn {
+    @apply border-white/10;
+  }
+
+  .retro-btn-primary {
+    @apply retro-btn bg-retro-orange text-white hover:bg-retro-rust;
+  }
+
+  .retro-btn-secondary {
+    @apply retro-btn bg-retro-cream text-retro-black hover:bg-retro-paper;
+  }
+
+  html.dark .retro-btn-secondary {
+    @apply bg-retro-dark text-retro-cream hover:bg-retro-gray/30;
+  }
+
+  .skill-tag {
+    @apply inline-flex items-center gap-2 px-2.5 py-1 text-sm font-medium rounded-md
+           bg-retro-paper text-retro-black border border-retro-black/5;
+  }
+
+  html.dark .skill-tag {
+    @apply bg-retro-gray/30 text-retro-cream border-white/5;
+  }
+
+  .section-divider {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-retro-black/10 to-transparent;
+  }
+
+  html.dark .section-divider {
+    @apply via-white/10;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
