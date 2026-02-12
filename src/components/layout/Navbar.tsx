@@ -8,6 +8,8 @@ import {
   SunIcon,
   MoonIcon,
 } from '@/components/ui/Icons';
+import { useBottomHide } from '@/hooks/useBottomHide';
+
 
 const renderIcon = (icon: string) => {
   switch (icon.toLowerCase()) {
@@ -25,18 +27,23 @@ const renderIcon = (icon: string) => {
 
 export const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
+  const hidden = useBottomHide();
 
   return (
-    <motion.nav
-      initial={{ y: 80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}
-      className="
-        fixed bottom-4 inset-x-0 z-50
-        flex justify-center
-        px-3 sm:px-4
-      "
-    >
+      <motion.nav
+        initial={{ y: 80, opacity: 0 }}
+        animate={{
+          y: hidden ? 120 : 0,
+          opacity: hidden ? 0 : 1,
+        }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
+        className="
+          fixed bottom-4 inset-x-0 z-50
+          flex justify-center
+          px-3 sm:px-4
+        "
+      >
+
       <div
         className="
           flex items-center gap-1 sm:gap-2
