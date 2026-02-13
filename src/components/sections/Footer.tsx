@@ -15,12 +15,12 @@ export const Footer = () => {
     <footer className="py-12 mt-16 border-t border-retro-black/5 dark:border-white/5">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Left */}
+       
           <p className="text-sm text-retro-gray dark:text-retro-paper/60">
             © {currentYear} Chaitanya Shinde
           </p>
 
-          {/* Center - Email */}
+         
           <a
             href="mailto:chaitanyashinde8290@gmail.com"
             className="text-sm text-retro-gray dark:text-retro-paper/60 hover:text-retro-orange transition-colors"

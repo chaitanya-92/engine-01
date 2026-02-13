@@ -65,7 +65,7 @@ export const Navbar = () => {
           shadow-lg
         "
       >
-        {/* Navigation Section */}
+      
         {navItems.map((item) => (
           <motion.a
             key={item.name}
@@ -86,10 +86,8 @@ export const Navbar = () => {
           </motion.a>
         ))}
 
-        {/* Divider */}
         <div className="h-6 w-px bg-retro-black/10 dark:bg-retro-paper/10 mx-1" />
 
-        {/* Social Section */}
         {socialLinks
           .filter((link) => link.icon !== 'leetcode')
           .map(({ name, url, icon }) => {
@@ -119,10 +117,9 @@ export const Navbar = () => {
             );
           })}
 
-        {/* Divider */}
+
         <div className="h-6 w-px bg-retro-black/10 dark:bg-retro-paper/10 mx-1" />
 
-        {/* Theme Toggle */}
         <motion.button
           onClick={toggleTheme}
           aria-label="Toggle theme"
