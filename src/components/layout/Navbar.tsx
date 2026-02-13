@@ -7,11 +7,14 @@ import {
   TwitterIcon,
   SunIcon,
   MoonIcon,
+  HomeIcon,
+  FolderIcon,
+  CodeIcon,
+  TimelineIcon,
 } from '@/components/ui/Icons';
 import { useBottomHide } from '@/hooks/useBottomHide';
 
-
-const renderIcon = (icon: string) => {
+const renderSocialIcon = (icon: string) => {
   switch (icon.toLowerCase()) {
     case 'github':
       return <GitHubIcon className="w-5 h-5" />;
@@ -25,25 +28,32 @@ const renderIcon = (icon: string) => {
   }
 };
 
+const navItems = [
+  { name: 'Hero', href: '#hero', icon: <HomeIcon className="w-5 h-5" /> },
+  { name: 'Tech', href: '#tech', icon: <CodeIcon className="w-5 h-5" /> },
+  { name: 'Experience', href: '#experience', icon: <TimelineIcon className="w-5 h-5" /> },
+  { name: 'Projects', href: '#projects', icon: <FolderIcon className="w-5 h-5" /> },
+];
+
+
 export const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const hidden = useBottomHide();
 
   return (
-      <motion.nav
-        initial={{ y: 80, opacity: 0 }}
-        animate={{
-          y: hidden ? 120 : 0,
-          opacity: hidden ? 0 : 1,
-        }}
-        transition={{ duration: 0.3, ease: 'easeOut' }}
-        className="
-          fixed bottom-4 inset-x-0 z-50
-          flex justify-center
-          px-3 sm:px-4
-        "
-      >
-
+    <motion.nav
+      initial={{ y: 80, opacity: 0 }}
+      animate={{
+        y: hidden ? 120 : 0,
+        opacity: hidden ? 0 : 1,
+      }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
+      className="
+        fixed bottom-4 inset-x-0 z-50
+        flex justify-center
+        px-3 sm:px-4
+      "
+    >
       <div
         className="
           flex items-center gap-1 sm:gap-2
@@ -55,10 +65,33 @@ export const Navbar = () => {
           shadow-lg
         "
       >
+      
+        {navItems.map((item) => (
+          <motion.a
+            key={item.name}
+            href={item.href}
+            aria-label={item.name}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="
+              p-2 sm:p-2.5
+              rounded-xl
+              text-retro-gray dark:text-retro-paper/70
+              hover:text-retro-orange
+              hover:bg-retro-paper dark:hover:bg-retro-gray/30
+              transition-all
+            "
+          >
+            {item.icon}
+          </motion.a>
+        ))}
+
+        <div className="h-6 w-px bg-retro-black/10 dark:bg-retro-paper/10 mx-1" />
+
         {socialLinks
-          .filter(link => link.icon !== 'leetcode') // ❌ no LeetCode in navbar
+          .filter((link) => link.icon !== 'leetcode')
           .map(({ name, url, icon }) => {
-            const IconElement = renderIcon(icon);
+            const IconElement = renderSocialIcon(icon);
             if (!IconElement) return null;
 
             return (
@@ -84,7 +117,9 @@ export const Navbar = () => {
             );
           })}
 
-        {/* Theme Toggle */}
+
+        <div className="h-6 w-px bg-retro-black/10 dark:bg-retro-paper/10 mx-1" />
+
         <motion.button
           onClick={toggleTheme}
           aria-label="Toggle theme"

@@ -55,3 +55,94 @@ export const ExpandIcon = ({ className = 'w-4 h-4' }) => (
     <path d="M14 3h7v7h-2V6.41l-4.29 4.3-1.42-1.42 4.3-4.29H14V3ZM3 14h2v4.59l4.29-4.3 1.42 1.42-4.3 4.29H10v2H3v-7Z" />
   </svg>
 );
+
+
+export const HomeIcon = ({ className = 'w-5 h-5' }: IconProps) => (
+  <svg
+    className={className}
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+      d="M3 10l9-7 9 7M4 10v10a1 1 0 001 1h5m8-11v10a1 1 0 01-1 1h-5m-4 0h4" />
+  </svg>
+);
+
+export const FolderIcon = ({ className = 'w-5 h-5' }: IconProps) => (
+  <svg
+    className={className}
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+      d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+  </svg>
+);
+
+export const UserIcon = ({ className = 'w-5 h-5' }: IconProps) => (
+  <svg
+    className={className}
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+      d="M5.121 17.804A9 9 0 1118.879 17.8M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+);
+
+export const MailIcon = ({ className = 'w-5 h-5' }: IconProps) => (
+  <svg
+    className={className}
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+      d="M3 8l9 6 9-6M21 8v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8" />
+  </svg>
+);
+
+
+export const CodeIcon = ({ className = 'w-5 h-5' }: IconProps) => (
+  <svg
+    className={className}
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+      d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+  </svg>
+);
+
+export const BriefcaseIcon = ({ className = 'w-5 h-5' }: IconProps) => (
+  <svg
+    className={className}
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+      d="M9 6V4a1 1 0 011-1h4a1 1 0 011 1v2m-7 0h8m-9 0a2 2 0 00-2 2v9a2 2 0 002 2h10a2 2 0 002-2V8a2 2 0 00-2-2" />
+  </svg>
+);
+
+
+export const TimelineIcon = ({ className = 'w-5 h-5' }: IconProps) => (
+  <svg
+    className={className}
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+    />
+  </svg>
+);
