@@ -30,7 +30,6 @@ export default function Projects() {
           and healthcare systems.
         </p>
 
-        {/* ---------- Tabs ---------- */}
         <div className="flex justify-center items-center gap-2 mb-6">
           {(['personal', 'client'] as Tab[]).map((tab: Tab) => (
             <button
@@ -50,7 +49,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* ---------- Projects Grid ---------- */}
         <div className="grid md:grid-cols-2 gap-4">
           {filteredProjects.map((project: Project, index: number) => (
             <motion.div
@@ -103,19 +101,16 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Description */}
               <p className="text-sm text-retro-gray dark:text-retro-paper/70 mb-3">
                 {project.description}
               </p>
 
-              {/* Highlights */}
               <ul className="space-y-1 mb-4 text-sm text-retro-gray dark:text-retro-paper/70">
                 {project.highlights.slice(0, 3).map((h: string, i: number) => (
                   <li key={i}>• {h}</li>
                 ))}
               </ul>
 
-              {/* Footer */}
               <div className="flex items-center justify-between pt-4 border-t border-retro-black/5 dark:border-white/5">
                 <div className="flex flex-wrap gap-2">
                 {project.tech.slice(0, 3).map((tech: string) => (
@@ -156,7 +151,6 @@ export default function Projects() {
         </div>
       </motion.div>
 
-      {/* ---------- Modal ---------- */}
       {activeProject && (
         <Modal
           exp={activeProject}
