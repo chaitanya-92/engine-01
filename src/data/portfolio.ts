@@ -214,6 +214,7 @@ export const projects: Project[] = [
     tech: [
       'React.js',
       'Node.js',
+      'Express.js',
       'WebSockets',
       'JWT Authentication',
       'Media Storage & Handling',
@@ -240,7 +241,7 @@ export const projects: Project[] = [
       'React.js',
       'Node.js',
       'Express.js',
-      'PostgreSQL / SQL',
+      'PostgreSQL',
       'JWT Authentication',
       'Role-Based Access Control (RBAC)',
       'Recharts',
