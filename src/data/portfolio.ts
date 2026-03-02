@@ -277,3 +277,26 @@ export const projects: Project[] = [
   }
   
 ];
+
+export const blogs = [
+  {
+    title: "Why I Stopped Using AI (The Way Everyone Else Does)",
+    description:
+      "A reflection on productivity illusions, blind AI usage, and why building without understanding is dangerous.",
+    link: "https://medium.com/@chaitanyashinde8290/why-i-stopped-using-ai-the-way-everyone-else-does-a9d0da3f0b42",
+  },
+  {
+    title:
+      "Why I Finally Understood the Need for Context API (While Building My Web3 Wallet)",
+    description:
+      "How prop drilling broke my architecture and forced me to understand state management deeply.",
+    link: "https://medium.com/@chaitanyashinde8290/why-i-finally-understood-the-need-for-context-api-while-building-my-web3-wallet-397add6a7c4a",
+  },
+  {
+    title:
+      "Stop Copy-Pasting Components. Build Your Own Library and Publish It to npm.",
+    description:
+      "A practical guide to structuring, bundling, and publishing your own reusable React component library.",
+    link: "https://medium.com/@chaitanyashinde8290/stop-copy-pasting-components-how-to-build-and-publish-your-own-react-component-library-to-npm-0b8d6556ad7c",
+  },
+];
