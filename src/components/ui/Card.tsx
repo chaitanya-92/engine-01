@@ -21,7 +21,6 @@ export const Card = ({ exp, index }: Props) => {
         onClick={() => setOpen(true)}
         className="retro-card retro-card-hover p-5 cursor-pointer"
       >
-        {/* Header */}
         <div className="flex items-center justify-between mb-2">
           <h3 className="font-semibold text-retro-black dark:text-retro-cream">
             {exp.role}
@@ -42,7 +41,6 @@ export const Card = ({ exp, index }: Props) => {
           {exp.achievements[0]}
         </p>
 
-        {/* Footer */}
         <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-retro-black/5 dark:border-white/5">
           {exp.skills?.map((skill) => (
             <span key={skill} className="skill-tag">
