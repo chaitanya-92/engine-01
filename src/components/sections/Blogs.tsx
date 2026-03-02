@@ -5,7 +5,7 @@ import {
     useScroll,
     useSpring,
   } from "framer-motion";
-  import { useRef, useState, useEffect } from "react";
+  import { useRef, useState} from "react";
   import { ExternalLinkIcon } from "@/components/ui/Icons";
   import { useMediumPosts } from "@/hooks/useMediumPosts";
   
