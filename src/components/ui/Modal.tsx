@@ -161,14 +161,13 @@ export const Modal = ({ exp, onClose }: Props) => {
             </motion.ul>
           </div>
 
-          {/* ---------- FOOTER ---------- */}
           <motion.div
             variants={loadItem}
             className="px-6 pb-6 pt-2 text-xs text-retro-gray dark:text-retro-paper/50"
           >
-            {isExperience(exp)
+            {/* {isExperience(exp)
               ? "Professional Experience"
-              : "Personal / Independent Project"}
+              : "Personal / Independent Project"} */}
           </motion.div>
         </motion.div>
       </motion.div>
