@@ -7,8 +7,6 @@ import { Experience } from './components/sections/Experience';
 import Projects from './components/sections/Projects';
 import { Footer } from './components/sections/Footer';
 import { FloatingTime } from './components/ui/FloatingTime';
-// import { Profiles } from './components/sections/Profiles';
-import { Blogs } from './components/sections/Blogs';
 
 function App() {
   return (  
@@ -39,8 +37,6 @@ function App() {
           <div className="section-divider my-12" />
           <Projects />
 
-          <div className="section-divider my-12" />
-          <Blogs />
           {/* <Profiles /> */}
         </main>
 
