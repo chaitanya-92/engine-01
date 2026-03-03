@@ -2,71 +2,70 @@ import type { Experience, ProfileCard, SocialLink, TechCategory ,Project} from '
 
 export const techStack: TechCategory[] = [
   {
-    title: 'Languages',
+    title: 'Programming Languages',
     items: [
       { name: 'JavaScript' },
-      { name: 'Python' },
       { name: 'TypeScript' },
+      { name: 'Python' },
       { name: 'Java' },
       { name: 'C' },
+      { name: 'Rust' },
     ],
   },
   {
-    title: 'Backend Frameworks',
+    title: 'Frontend Development',
+    items: [
+      { name: 'React.js' },
+      { name: 'Next.js' },
+    ],
+  },
+  {
+    title: 'Backend Development',
     items: [
       { name: 'Node.js' },
-      { name: 'Express.js' },      
       { name: 'Django' },
       { name: 'REST APIs' },
     ],
   },
   {
-    title: 'Frontend',
-    items: [
-      { name: 'React.js' },
-      { name: 'Redux' },
-      { name: 'Micro Frontends' },
-      { name: 'Tailwind CSS' },
-      { name: 'HTML5' },
-      { name: 'CSS3' },
-    ],
-  },
-  {
-    title: 'Databases & Messaging',
+    title: 'Databases',
     items: [
       { name: 'MySQL' },
       { name: 'PostgreSQL' },
-      { name: 'SQL Server' },
       { name: 'MongoDB' },
-      { name: 'Elasticsearch' },
     ],
   },
   {
-    title: 'Engineering & Practices',
+    title: 'Cloud & DevOps',
     items: [
+      { name: 'AWS' },
+      { name: 'Docker' },
       { name: 'Git & GitHub' },
-      { name: 'Microservices Architecture' },
-      { name: 'Unit & Integration Testing' },
-      { name: 'AI / ML Fundamentals' },
-      { name: 'Postman' },
     ],
   },
+  // {
+  //   title: 'AI / Machine Learning',
+  //   items: [
+  //     { name: 'Machine Learning Fundamentals' },
+  //     { name: 'Pandas & NumPy' },
+  //     { name: 'Large Language Models (LLMs)' },
+  //     { name: 'Prompt Engineering' },
+  //     { name: 'Retrieval-Augmented Generation (RAG)' },
+  //     { name: 'LangChain (Basics)' },
+  //     { name: 'OpenAI APIs' },
+  //     { name: 'Hugging Face APIs' },
+  //     { name: 'Text Generation & Summarization' },
+  //     { name: 'AI Model Integration via REST APIs' },
+  //   ],
+  // },
   {
-    title: 'AI / ML',
+    title: 'Tools & Engineering Practices',
     items: [
-      { name: 'Machine Learning Fundamentals' },
-      { name: 'Pandas & NumPy' },
-      { name: 'Large Language Models (LLMs)' },
-      { name: 'Prompt Engineering' },
-      { name: 'Retrieval-Augmented Generation (RAG)' },
-      { name: 'Text Generation & Summarization' },
-      { name: 'OpenAI / Hugging Face APIs' },
-      { name: 'LangChain(Basics)' },
-      { name: 'Vector Databases ' },
-      { name: 'AI Model Integration via REST APIs' },
+      { name: 'Postman' },
+      { name: 'API Testing' },
+      { name: 'Clean Architecture' },
     ],
-  }
-  
+  },
 ];
 
 
