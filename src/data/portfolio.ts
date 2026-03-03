@@ -9,7 +9,7 @@ export const techStack: TechCategory[] = [
       { name: 'Python' },
       { name: 'Java' },
       { name: 'C' },
-      { name: 'Rust' },
+      // { name: 'Rust' },
     ],
   },
   {
