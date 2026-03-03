@@ -24,7 +24,7 @@ export const techStack: TechCategory[] = [
     items: [
       { name: 'Node.js' },
       { name: 'Django' },
-      { name: 'REST APIs' },
+     
     ],
   },
   {
@@ -62,8 +62,8 @@ export const techStack: TechCategory[] = [
     title: 'Tools & Engineering Practices',
     items: [
       { name: 'Postman' },
-      { name: 'API Testing' },
-      { name: 'Clean Architecture' },
+      // { name: 'API Testing' },
+      // { name: 'Clean Architecture' },
     ],
   },
 ];
