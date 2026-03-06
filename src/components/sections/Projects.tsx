@@ -30,6 +30,7 @@ export default function Projects() {
           and healthcare systems.
         </p>
 
+        {/* Tabs */}
         <div className="flex justify-center items-center gap-2 mb-6">
           {(['personal', 'client'] as Tab[]).map((tab: Tab) => (
             <button
@@ -49,7 +50,8 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 gap-4 items-stretch">
           {filteredProjects.map((project: Project, index: number) => (
             <motion.div
               key={project.title}
@@ -57,14 +59,14 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="retro-card retro-card-hover p-5"
+              className="retro-card retro-card-hover p-5 flex flex-col h-full"
             >
               {/* Header */}
               <div className="flex items-start justify-between mb-2">
                 <div>
                   <h3 className="font-semibold">{project.title}</h3>
                   <p className="text-xs text-retro-gray dark:text-retro-paper/60">
-                    {project.subtitle} 
+                    {project.subtitle}
                   </p>
                 </div>
 
@@ -101,30 +103,37 @@ export default function Projects() {
                 </div>
               </div>
 
-              <p className="text-sm text-retro-gray dark:text-retro-paper/70 mb-3">
-                {project.description}
-              </p>
 
-              <ul className="space-y-1 mb-4 text-sm text-retro-gray dark:text-retro-paper/70">
-                {project.highlights.slice(0, 3).map((h: string, i: number) => (
-                  <li key={i}>• {h}</li>
-                ))}
-              </ul>
+              <div className="flex-grow">
+                <p className="text-sm text-retro-gray dark:text-retro-paper/70 mb-3">
+                  {project.description}
+                </p>
 
-              <div className="flex items-center justify-between pt-4 border-t border-retro-black/5 dark:border-white/5">
-                <div className="flex flex-wrap gap-2">
-                {project.tech.slice(0, 3).map((tech: string) => (
-                  <span key={tech} className="skill-tag">
-                    {tech}
-                  </span>
-                ))}
+                <ul className="space-y-1 mb-4 text-sm text-retro-gray dark:text-retro-paper/70">
+                  {project.highlights.slice(0, 3).map((h, i) => (
+                    <li key={i} className="line-clamp-1">
+                      • {h}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex items-center justify-between pt-4 border-t border-retro-black/5 dark:border-white/5 mt-auto">
 
-                {project.tech.length > 3 && (
+                <div className="flex gap-2 flex-nowrap overflow-hidden">
+                  {project.tech.slice(0, 3).map((tech) => (
+                    <span
+                      key={tech}
+                      className="skill-tag whitespace-nowrap"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+
+                  {project.tech.length > 3 && (
                     <button
                       type="button"
                       onClick={() => setActiveProject(project)}
-                      className="skill-tag opacity-60 hover:opacity-100 transition cursor-pointer"
-                      aria-label="View all technologies"
+                      className="skill-tag opacity-60 hover:opacity-100 transition cursor-pointer whitespace-nowrap"
                     >
                       +{project.tech.length - 3} more
                     </button>
@@ -150,6 +159,7 @@ export default function Projects() {
           ))}
         </div>
       </motion.div>
+
 
       {activeProject && (
         <Modal
