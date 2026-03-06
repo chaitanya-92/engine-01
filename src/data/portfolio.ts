@@ -167,6 +167,30 @@ const TEMP_LINK = 'https://github.com/chaitanya-92';
 
 export const projects: Project[] = [
   {
+  title: 'ShieldCare',
+  subtitle: 'Secure Temporary File Sharing Platform',
+  description:
+    'A secure file sharing platform that allows users to upload files and generate temporary shareable links that automatically expire, ensuring controlled access and improved data privacy.',
+  highlights: [
+    'Secure file upload with temporary shareable links',
+    'Automatic file expiration and deletion after a defined time period',
+    'Backend logic for secure file access and lifecycle management',
+    'REST APIs for upload, retrieval, and secure file deletion',
+    'Simple and responsive interface for quick and secure file sharing',
+  ],
+  tech: [
+    'Next.js',
+    'Node.js',
+    'Express.js',
+    'Cloudinary',
+    'REST APIs',
+    'Tailwind CSS',
+  ],
+  github: 'https://github.com/chaitanya-92/shield-share',
+  live: 'https://shield-share.vercel.app/',
+  category: 'personal',
+},
+  {
     title: 'KnowTastic',
     subtitle: 'AI-powered Learning Management System',
     description:
