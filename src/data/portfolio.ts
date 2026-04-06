@@ -167,7 +167,7 @@ const TEMP_LINK = 'https://github.com/chaitanya-92';
 
 export const projects: Project[] = [
   {
-  title: 'ShieldCare',
+  title: 'ShieldShare',
   subtitle: 'Secure Temporary File Sharing Platform',
   description:
     'A secure file sharing platform that allows users to upload files and generate temporary shareable links that automatically expire, ensuring controlled access and improved data privacy.',
